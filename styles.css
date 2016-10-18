@@ -16,7 +16,6 @@ body {
 #logo {
   display: block;
   font-weight: 700;
-  /*text-shadow: 2px 2px #CCCCCC;*/
   color: #3D3242;
   font-size: 5rem;
 }
@@ -56,4 +55,77 @@ button:hover {
 button:active {
   transition-duration: 0.2s;
   transform: translateY(8px);
+}
+
+#count {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 2px solid aqua;
+}
+
+.counting {
+  background-color: #3D3242;
+  color: #FFFFFF;
+  height: 50px;
+  width: 70px;
+  padding: 10px;
+  text-align: center;
+  margin: 20px 40px;
+  border-radius: 4px;
+}
+
+span {
+  display: block;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-top: 5px;
+}
+
+#bkm-list {
+  display: flex;
+  justify-content: center;
+  /*is it working?!?!?*/
+  flex-wrap: wrap;
+  border: 2px solid pink;
+}
+
+.new-bkm {
+  border: solid 4px #E18942;
+  border-radius: 4px;
+  height: 100px;
+  width: 200px;
+  position: relative;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.bkm-name {
+  color: #FFFFFF;
+  background-color: #E18942;
+}
+
+.bkm-url {
+  margin: 10px;
+}
+
+label {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.bkm-remove {
+  position: absolute;
+  font-size: .2rem;
+  bottom: 0;
+  right: 0;
+  height: 20px;
+  width: 60px;
+  margin: none;
+}
+
+.hide {
+  display: none;
 }

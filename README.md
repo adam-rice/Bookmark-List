@@ -1,4 +1,4 @@
-# Bookmark-List
+# Bookmark List
 A List to Store Pages You Want to Read!
 
 [View the application.](https://adam-rice.github.io/Bookmark-List/)
