@@ -4,25 +4,25 @@ body {
 }
 
 #creation {
+  align-items: center;
+  background-color: #EECD86;
   border-bottom: solid 4px #E18942;
   display: flex;
   flex-direction: column;
-  background-color: #EECD86;
-  height: 350px;
   justify-content: center;
-  align-items: center;
+  height: 350px;
 }
 
 #logo {
   display: block;
-  font-weight: 700;
   color: #3D3242;
+  font-weight: 700;
   font-size: 5rem;
 }
 
 #inputs {
-  margin-top: 25px;
   flex-direction: row;
+  margin-top: 25px;
 }
 
 input, button {
@@ -43,7 +43,7 @@ button {
   height: 40px;
   width: 150px;
   margin-top: 25px;
-  text-indent: none;
+  text-indent: 0px;
   transition-duration: 0.4s;
 }
 
@@ -59,20 +59,19 @@ button:active {
 
 #count {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  border: 2px solid aqua;
+  /*border: 2px solid aqua;*/
 }
 
 .counting {
   background-color: #3D3242;
+  border-radius: 4px;
   color: #FFFFFF;
   height: 50px;
   width: 70px;
+  margin: 20px 40px;
   padding: 10px;
   text-align: center;
-  margin: 20px 40px;
-  border-radius: 4px;
 }
 
 span {
@@ -86,8 +85,8 @@ span {
   display: flex;
   justify-content: center;
   /*is it working?!?!?*/
-  flex-wrap: wrap;
-  border: 2px solid pink;
+  /*flex-wrap: wrap;*/
+  /*border: 2px solid pink;*/
 }
 
 .new-bkm {
@@ -95,35 +94,55 @@ span {
   border-radius: 4px;
   height: 100px;
   width: 200px;
+  margin: 20px;
   position: relative;
   text-align: center;
-  font-size: 1rem;
 }
 
 .bkm-name {
-  color: #FFFFFF;
   background-color: #E18942;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 2px;
 }
 
 .bkm-url {
-  margin: 10px;
+  margin: 12px;
+  font-size: 1.2rem;
 }
 
-label {
-  display: inline-block;
+div {
+  /*border: 2px solid aqua;*/
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 5px;
+  left: 5px;
+}
+
+div label {
+  display: block;
+  font-size: 0.8rem;
+}
+
+div input {
+  width: 14px;
+  height: 14px;
+  margin:0;
 }
 
 .bkm-remove {
-  position: absolute;
-  font-size: .2rem;
-  bottom: 0;
-  right: 0;
+  font-size: 0.7rem;
   height: 20px;
   width: 60px;
   margin: none;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+.bkm-remove:active {
+  transition-duration: none;
+  transform: none;
 }
 
 .hide {
