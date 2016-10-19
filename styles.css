@@ -186,6 +186,16 @@ a:hover {
   border-bottom: 2px solid #CFD8DC;
 }
 
+h2.txt-dec-update {
+  border: none;
+}
+
+hr.txt-dec-update {
+  background-color: #CFD8DC;
+  border: none;
+  height: 2px;
+}
+
 .delete:hover {
   border-bottom: 2px solid #FFC107;
   cursor: pointer;
@@ -231,7 +241,6 @@ a:hover {
   }
 
   header {
-    border: 2px solid aqua;
     border-radius: 0px;
     position: inherit;
     top: auto;
@@ -252,7 +261,7 @@ a:hover {
 
 @media screen and (max-width: 520px) {
   #logo-section {
-    height: 350px;
+    height: 325px;
   }
 
   h1 {

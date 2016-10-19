@@ -16,6 +16,9 @@ var $list = $('#list');
 
 $create.on('click', function() {
   validateInputs();
+  clearFields();
+  counter();
+  $title.focus();
 });
 
 function clearFields() {
@@ -29,7 +32,7 @@ function counter() {
  var $unread = $('#unread-bkm');
  var unread = $('.unread').length;
  var read = $('.read').length;
- var total = unread + read;
+ var total = $('li').length;
  $saved.text(total);
  $read.text(read);
  $unread.text(unread - read);
@@ -58,8 +61,10 @@ $('.list').on('click', '.unread-btn', function () {
   $(this).parent().toggleClass('read');
   $(this).toggleClass('read-btn-update');
   $(this).siblings().toggleClass('delete-update txt-dec-update');
+  counter();
 });
 
 $('.list').on('click', '.delete', function() {
   $(this).parent().remove();
+  counter();
 });
