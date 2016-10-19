@@ -110,9 +110,14 @@ h3 {
 h2 {
   font-weight: 800;
   font-size: 2.2rem;
+  line-height: 1.4;
   color: #455A64;
-  margin-left: 5%;
+  width: 85%;
+  margin-left: 7%;
   margin-top: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 hr {
@@ -120,17 +125,25 @@ hr {
   border: none;
   height: 2px;
   width: 90%;
-  margin: 25px auto 50px auto;
+  margin: 20px auto 20px auto;
+}
+
+#hr-lower {
+  margin-bottom: 50px;
 }
 
 a {
   color: #607D8B;
+  display: block;
   font-size: 1.5rem;
-  margin-left: 5%;
-  border-bottom: 2px solid #F2F4F4;
-  text-decoration: none;
+  line-height: 1.5;
+  margin-left: 7%;
+  width: 75%;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  border-bottom: 2px solid #F2F4F4;
+  text-decoration: none;
 }
 
 a:hover {
@@ -146,7 +159,7 @@ a:hover {
   font-weight: 400;
   position: absolute;
   bottom: 7px;
-  left: 5%;
+  left: 6%;
   border: none;
   border-bottom: 2px solid #F2F4F4;
   outline: none;
@@ -169,7 +182,7 @@ a:hover {
   font-size: 1.2rem;
   position: absolute;
   bottom: 7px;
-  right: 5%;
+  right: 6%;
   border: none;
   background-color: #FFFFFF;
   color: #455A64;
