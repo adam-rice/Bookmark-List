@@ -23,8 +23,9 @@ $url.keyup( function ()  {
 
 $list.on('click', '.unread-btn', function () {
   $(this).parent().toggleClass('read');
-  $(this).toggleClass('read-btn-update');
+  $(this).toggleClass('read-btn-update txt-dec-update');
   $(this).siblings().toggleClass('delete-update txt-dec-update');
+  $('.url-span').toggleClass('txt-dec-update');
   counter();
 });
 
@@ -72,17 +73,21 @@ function addBkm() {
   $('ul').prepend(`
     <li class="new-bkm unread">
     <h2>${$title.val()}</h2><hr>
-    <a href="${$url.val()}" target="_blank">${$url.val()}</a><hr id="hr-lower">
+    <a href="${$url.val()}" target="_blank"><span class="url-span">${$url.val()}</span></a><hr id="hr-lower">
     <button class="unread-btn" type="button" name="button">Read</button>
     <button class="delete" type="button" name="button">Delete</button>
     </li>
     `)
   }
 
-  function submitBkm() {
-    validateInputs();
-    clearFields();
-    counter();
-    $title.focus();
-    $create.attr('disabled', true);
-  }
+function submitBkm() {
+  validateInputs();
+  clearFields();
+  counter();
+  $title.focus();
+  $create.attr('disabled', true);
+}
+
+function revealCounter() {
+
+}

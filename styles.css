@@ -85,6 +85,10 @@ header {
   z-index: 999;
 }
 
+.hide {
+  display: none;
+}
+
 h3 {
   font-weight: 800;
   margin: 5px 0;
@@ -142,14 +146,17 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  border-bottom: 3px solid #F2F4F4;
   text-decoration: none;
 }
 
-a:hover {
-  font-weight: 800;
-  border-bottom: 3px solid #FFC107;
+.url-span {
+  border-bottom: 2px solid #F2F4F4;
+}
+
+.url-span:hover {
+  border-bottom: 2px solid #FFC107;
   cursor: pointer;
+  font-weight: 800;
 }
 
 .unread-btn {
@@ -209,6 +216,14 @@ hr.txt-dec-update {
   height: 2px;
 }
 
+.url-span.txt-dec-update {
+  border-bottom: 2px solid #CFD8DC;
+}
+
+a.txt-dec-update {
+  border-bottom: none;
+}
+
 .delete:hover {
   border-bottom: 2px solid #FFC107;
   cursor: pointer;
@@ -254,15 +269,17 @@ hr.txt-dec-update {
   }
 
   header {
+    display: none;
     border-radius: 0px;
     position: inherit;
-    top: auto;
-    right: auto;
+    top: 0;
+    right: 0;
     height: 50px;
-    width: 100%;
-    z-index: 0;
+    margin: 0 auto;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
     display: inherit;
-
+    text-align: center;
   }
 
   h3 {
