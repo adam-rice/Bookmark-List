@@ -22,17 +22,17 @@ img {
   width: 50%;
 }
 
-#logo {
-  height: 150px;
-  width: 150px;
-  margin-bottom: -40px;
-}
-
 h1 {
   color: #FFFFFF;
   font-size: 5rem;
   font-weight: 800;
   margin-bottom: 60px;
+}
+
+#logo {
+  height: 150px;
+  width: 150px;
+  margin-bottom: -40px;
 }
 
 input, #create-btn {
@@ -76,9 +76,8 @@ header {
   background-color: #455A64;
   border-radius: 8px;
   color: #FFFFFF;
-  font-weight: 800;
   position: fixed;
-  top: 0;
+  top: 12px;
   right: 0;
   height: 75px;
   width: 190px;
@@ -87,15 +86,25 @@ header {
 }
 
 h3 {
+  font-weight: 800;
   margin: 5px 0;
 }
 
 .new-bkm {
-  background-color: #FFFFFF;
-  border: solid 2px #607D8B;
   position: relative;
   width: 75%;
   margin: 30px auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.unread {
+  background-color: #FFFFFF;
+  border: solid 2px #607D8B;
+}
+
+.read {
+  background-color: #F2F4F4;
 }
 
 h2 {
@@ -117,6 +126,8 @@ a {
   font-size: 1.5rem;
   margin-left: 5%;
   text-decoration-color: #F2F4F4;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 a:hover {
@@ -125,20 +136,27 @@ a:hover {
   cursor: pointer;
 }
 
-.unread {
+.unread-btn {
   font-size: 1.2rem;
+  background-color: #FFFFFF;
+  color: #455A64;
+  font-weight: 400;
   position: absolute;
   bottom: 5px;
   left: 5%;
   border: none;
-  background-color: #FFFFFF;
-  color: #455A64;
   text-decoration: underline;
   text-decoration-color: #F2F4F4;
   outline: none;
 }
 
-.unread:hover {
+.read-btn-update {
+  background-color: #F2F4F4;
+  color: #F05A28;
+  font-weight: 800;
+}
+
+.unread-btn:hover {
   font-weight: 800;
   text-decoration: underline;
   text-decoration-color: #FFC107;
@@ -158,8 +176,116 @@ a:hover {
   outline: none;
 }
 
+.delete-update {
+  background-color: #F2F4F4;
+}
+
+.txt-dec-update {
+  text-decoration-color: #CFD8DC;
+}
+
 .delete:hover {
   text-decoration: underline;
   text-decoration-color: #FFC107;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1300px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  #logo {
+    height: 90px;
+    width: 90px;
+    margin-bottom: -25px;
+  }
+
+  input, #create-btn {
+    height: 40px;
+  }
+
+  input {
+    font-size: 1.8rem;
+    text-indent: 10px;
+  }
+
+  #create-btn {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #logo-section {
+    height: 400px;
+    width: 100%;
+    position: inherit;
+  }
+
+  #list {
+    float: none;
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  header {
+    border: 2px solid aqua;
+    border-radius: 0px;
+    position: inherit;
+    top: auto;
+    right: auto;
+    height: 50px;
+    width: 100%;
+    z-index: 0;
+    display: inherit;
+
+  }
+
+  h3 {
+    font-weight: 400;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  #logo-section {
+    height: 350px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  #logo {
+    height: 50px;
+    width: 50px;
+    margin-bottom: -15px;
+  }
+
+  input, #create-btn {
+    margin-bottom: 25px;
+  }
+
+  input {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  hr {
+    margin: 20px auto 40px auto;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+
+  .unread-btn, .delete {
+    font-size: 1rem;
+  }
 }
