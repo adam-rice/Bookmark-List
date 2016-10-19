@@ -1,7 +1,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  /*position: relative;*/
 }
 
 main {
@@ -10,17 +9,56 @@ main {
   width: 100vw;
 }
 
+img {
+  border: none;
+}
+
 #logo-section {
   background-color: #455A64;
-  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
   height: 100%;
   width: 50%;
 }
 
 #logo {
-  height: 25px;
-  width: 25px;
-  margin-bottom: -5px;
+  height: 150px;
+  width: 150px;
+  margin-bottom: -40px;
+}
+
+h1 {
+  color: #FFFFFF;
+  font-size: 5rem;
+  font-weight: 800;
+  margin-bottom: 60px;
+}
+
+input, #create-btn {
+  height: 50px;
+  width: 85%;
+  outline: none;
+  margin-bottom: 50px;
+}
+
+input {
+  font-size: 2rem;
+  text-indent: 10px;
+}
+
+#create-btn {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  background-color: #FFC107;
+}
+
+#create-btn:hover {
+  background-color: #FFD773;
+  cursor: pointer;
 }
 
 #list {
@@ -28,4 +66,58 @@ main {
   float: right;
   height: 100%;
   width: 50%;
+}
+
+.new-bkm {
+  background-color: #FFFFFF;
+  border: solid 2px #607D8B;
+}
+
+h2 {
+font-weight:800;
+color: #455A64;
+}
+
+hr {
+  color: #CFD8DC;
+  width: 80%;
+}
+
+a {
+  color: #607D8B;
+  text-decoration: underline;
+  text-decoration-color: #F2F4F4;
+}
+
+a:hover {
+  font-weight: 800;
+  text-decoration: underline solid #FFC107;
+  cursor: pointer;
+}
+
+.unread {
+  border: none;
+  background-color: #FFFFFF;
+  color: #455A64;
+  text-decoration: underline;
+  text-decoration-color: #F2F4F4;
+}
+
+.unread:hover {
+  font-weight: 800;
+  text-decoration: underline #FFC107;
+  cursor: pointer;
+}
+
+.delete {
+  border: none;
+  background-color: #FFFFFF;
+  color: #455A64;
+  text-decoration: underline #F2F4F4;
+}
+
+.delete:hover {
+  text-decoration: underline;
+  text-decoration-color: #FFC107;
+  cursor: pointer;
 }
