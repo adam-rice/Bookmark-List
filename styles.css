@@ -276,8 +276,8 @@ a.txt-dec-update {
     right: 0;
     height: 50px;
     margin: 0 auto;
-    border-bottom-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
     display: inherit;
     text-align: center;
   }

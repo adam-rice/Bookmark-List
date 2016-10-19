@@ -5,11 +5,13 @@ var $list = $('.list');
 
 $create.on('click', function() {
   submitBkm();
+  revealCounter();
 });
 
 $url.bind('keydown', function(e) {
   if (e.keyCode==13) {
     submitBkm();
+    revealCounter();
   }
 });
 
@@ -32,6 +34,7 @@ $list.on('click', '.unread-btn', function () {
 $list.on('click', '.delete', function() {
   $(this).parent().remove();
   counter();
+  revealCounter();
 });
 
 function enableCreate() {
@@ -89,5 +92,10 @@ function submitBkm() {
 }
 
 function revealCounter() {
-
+  var $header = $('header');
+  if ($('li').length >= 1) {
+    $header.delay(600).slideDown(500);
+  } else {
+    $header.slideUp(500);
+  }
 }
