@@ -1,6 +1,7 @@
 var $create = $('#create-btn');
 var $title = $('#title');
 var $url = $('#url');
+var $list = $('#list');
 
 $('.unread').on('click', '.unread-btn' ,function () {
   $(this).parent().toggleClass('read');
@@ -19,5 +20,41 @@ $('.unread').on('click', '.unread-btn' ,function () {
 // }
 
 $create.on('click', function() {
-  alert('booooooom');
+  validateInputs();
 });
+
+function clearFields() {
+  $title.val('');
+  $url.val('');
+}
+
+function counter() {
+ var $saved = $('#saved-bkm');
+ var $read = $('#read-bkm');
+ var $unread = $('#unread-bkm');
+ var unread = $('.unread').length;
+ var read = $('.read').length;
+ var total = unread + read;
+ $saved.text(total);
+ $read.text(read);
+ $unread.text(unread - read);
+}
+
+function addLink() {
+  $list.prepend(`
+    <article class="new-bkm unread">
+      <h2>The Website Title</h2><hr>
+      <a href="www.thewebsiteurl.com">www.thewebsiteurl.com</a><hr>
+      <button class="unread-btn" type="button" name="button">Read</button>
+      <button class="delete" type="button" name="button">Delete</button>
+    </article>
+    `)
+}
+
+function validateInputs() {
+  if ($title.val() === '' || $url.val() === '') {
+   alert("Please enter you bookmark information!");
+ } else {
+   addLink();
+  }
+}
