@@ -78,7 +78,7 @@ header {
   color: #FFFFFF;
   position: fixed;
   top: 12px;
-  right: 0;
+  right: 4px;
   height: 75px;
   width: 190px;
   padding: 8px;
@@ -142,7 +142,7 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  border-bottom: 2px solid #F2F4F4;
+  border-bottom: 3px solid #F2F4F4;
   text-decoration: none;
 }
 
