@@ -3,11 +3,6 @@ var $title = $('#title');
 var $url = $('#url');
 var $list = $('#list');
 
-$('.unread').on('click', '.unread-btn' ,function () {
-  $(this).parent().toggleClass('read');
-  $(this).toggleClass('read-btn-update');
-  $(this).siblings().toggleClass('delete-update txt-dec-update');
-});
 
 // enableBtn();
 //
@@ -41,13 +36,13 @@ function counter() {
 }
 
 function addLink() {
-  $list.prepend(`
-    <article class="new-bkm unread">
-      <h2>The Website Title</h2><hr>
-      <a href="www.thewebsiteurl.com">www.thewebsiteurl.com</a><hr>
+  $('ul').prepend(`
+    <li class="new-bkm unread">
+      <h2>${$title.val()}</h2><hr>
+      <a href="${$url.val()}">${$url.val()}</a><hr>
       <button class="unread-btn" type="button" name="button">Read</button>
       <button class="delete" type="button" name="button">Delete</button>
-    </article>
+    </li>
     `)
 }
 
@@ -58,3 +53,10 @@ function validateInputs() {
    addLink();
   }
 }
+
+$('.list').on('click', '.unread-btn', function () {
+  alert('hello');
+  // $(this).parent().toggleClass('read');
+  // $(this).toggleClass('read-btn-update');
+  // $(this).siblings().toggleClass('delete-update txt-dec-update');
+});

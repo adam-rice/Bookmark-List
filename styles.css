@@ -65,7 +65,7 @@ input {
   transform: translateY(2px);
 }
 
-#list {
+#list-container {
   float: right;
   position: relative;
   height: 100%;
@@ -222,7 +222,7 @@ a:hover {
     position: inherit;
   }
 
-  #list {
+  #list-container {
     float: none;
     display: block;
     position: relative;
