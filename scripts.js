@@ -55,8 +55,11 @@ function validateInputs() {
 }
 
 $('.list').on('click', '.unread-btn', function () {
-  alert('hello');
-  // $(this).parent().toggleClass('read');
-  // $(this).toggleClass('read-btn-update');
-  // $(this).siblings().toggleClass('delete-update txt-dec-update');
+  $(this).parent().toggleClass('read');
+  $(this).toggleClass('read-btn-update');
+  $(this).siblings().toggleClass('delete-update txt-dec-update');
+});
+
+$('.list').on('click', '.delete', function() {
+  $(this).parent().remove();
 });
