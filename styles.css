@@ -116,23 +116,26 @@ h2 {
 }
 
 hr {
-  color: #CFD8DC;
+  background-color: #CFD8DC;
+  border: none;
+  height: 2px;
   width: 90%;
-  margin: 25px auto 40px auto;
+  margin: 25px auto 50px auto;
 }
 
 a {
   color: #607D8B;
   font-size: 1.5rem;
   margin-left: 5%;
-  text-decoration-color: #F2F4F4;
+  border-bottom: 2px solid #F2F4F4;
+  text-decoration: none;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 a:hover {
   font-weight: 800;
-  text-decoration-color: #FFC107;
+  border-bottom: 3px solid #FFC107;
   cursor: pointer;
 }
 
@@ -142,12 +145,12 @@ a:hover {
   color: #455A64;
   font-weight: 400;
   position: absolute;
-  bottom: 5px;
+  bottom: 7px;
   left: 5%;
   border: none;
-  text-decoration: underline;
-  text-decoration-color: #F2F4F4;
+  border-bottom: 2px solid #F2F4F4;
   outline: none;
+  padding: 0px;
 }
 
 .read-btn-update {
@@ -158,22 +161,21 @@ a:hover {
 
 .unread-btn:hover {
   font-weight: 800;
-  text-decoration: underline;
-  text-decoration-color: #FFC107;
+  border-bottom: 2px solid #FFC107;
   cursor: pointer;
 }
 
 .delete {
   font-size: 1.2rem;
   position: absolute;
-  bottom: 5px;
+  bottom: 7px;
   right: 5%;
   border: none;
   background-color: #FFFFFF;
   color: #455A64;
-  text-decoration: underline;
-  text-decoration-color: #F2F4F4;
+  border-bottom: 2px solid #F2F4F4;
   outline: none;
+  padding: 0px;
 }
 
 .delete-update {
@@ -181,12 +183,11 @@ a:hover {
 }
 
 .txt-dec-update {
-  text-decoration-color: #CFD8DC;
+  border-bottom: 2px solid #CFD8DC;
 }
 
 .delete:hover {
-  text-decoration: underline;
-  text-decoration-color: #FFC107;
+  border-bottom: 2px solid #FFC107;
   cursor: pointer;
 }
 
