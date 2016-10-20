@@ -75,21 +75,13 @@ function validateInputs() {
 function addBkm() {
   $('ul').prepend(`
     <li class="new-bkm unread">
-    <h2>${$title.val()}</h2><hr>
-    <a href="${$url.val()}" target="_blank"><span class="url-span">${$url.val()}</span></a><hr id="hr-lower">
-    <button class="unread-btn" type="button" name="button">Read</button>
-    <button class="delete" type="button" name="button">Delete</button>
+      <h2>${$title.val()}</h2><hr>
+      <a href="${$url.val()}" target="_blank"><span class="url-span">${$url.val()}</span></a><hr id="hr-lower">
+      <button class="unread-btn" type="button" name="button">Read</button>
+      <button class="delete" type="button" name="button">Delete</button>
     </li>
     `)
   }
-
-function submitBkm() {
-  validateInputs();
-  clearFields();
-  counter();
-  $title.focus();
-  $create.attr('disabled', true);
-}
 
 function revealCounter() {
   var $header = $('header');
@@ -98,4 +90,28 @@ function revealCounter() {
   } else {
     $header.slideUp(500);
   }
+}
+
+function submitBkm() {
+  var url = $url.val();
+  if (!validUrl(url)) {
+    clearFields();
+    reset();
+    return alert('Please enter a valid URL address. You will need to add "http://", "https://" or "ftp://" to the beginning of your Website URL.');
+  } else {
+    validateInputs();
+    clearFields();
+    counter();
+    reset();
+  }
+}
+
+function reset() {
+  $title.focus();
+  $create.attr('disabled', true);
+}
+
+function validUrl(url) {
+  var urlTest = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+  return urlTest.test(url);
 }

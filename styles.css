@@ -80,10 +80,24 @@ header {
   position: fixed;
   top: 12px;
   right: 4px;
-  height: 75px;
+  /*height: 85px;*/
   width: 190px;
   padding: 8px;
   z-index: 999;
+}
+
+#remove-read-btn {
+  color: #455A64;
+  background-color: #FFC107;
+  border: none;
+  border-radius: 2px;
+  font-size: 0.5rem;
+  float: right;
+}
+
+#remove-read-btn:hover {
+  background-color: #FFD773;
+  cursor: pointer;
 }
 
 .hide {
@@ -92,7 +106,6 @@ header {
 
 h3 {
   font-weight: 800;
-  margin: 5px 0;
 }
 
 .new-bkm {
