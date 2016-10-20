@@ -1,0 +1,24 @@
+@media screen and (max-width: 1300px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  #logo {
+    margin-bottom: -25px;
+    height: 90px;
+    width: 90px;
+  }
+
+  input, #create-btn {
+    height: 40px;
+  }
+
+  input {
+    font-size: 1.8rem;
+    text-indent: 10px;
+  }
+
+  #create-btn {
+    font-size: 1.1rem;
+  }
+}

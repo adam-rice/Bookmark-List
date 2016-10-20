@@ -1,0 +1,42 @@
+@media screen and (max-width: 520px) {
+  #logo-section {
+    height: 325px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  #logo {
+    margin-bottom: -15px;
+    height: 50px;
+    width: 50px;
+  }
+
+  input, #create-btn {
+    margin-bottom: 25px;
+  }
+
+  input {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
+  hr {
+    margin: 20px auto 40px auto;
+  }
+
+  a {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .unread-btn, .delete {
+    font-size: 1rem;
+  }
+}
