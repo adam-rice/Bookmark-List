@@ -92,7 +92,7 @@ header {
 
 h3 {
   font-weight: 800;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 
 .new-bkm {
@@ -286,7 +286,7 @@ a.txt-dec-update {
   h3 {
     display: block;
     font-weight: 400;
-    margin: 0 auto;
+    margin: 0 auto 3px auto;
   }
 }
 
