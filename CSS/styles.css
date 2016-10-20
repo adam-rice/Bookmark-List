@@ -151,7 +151,7 @@ a {
   border-bottom: 2px solid #F2F4F4;
 }
 
-.url-span:hover {
+.url-span:hover, .url-span.txt-dec-update:hover {
   border-bottom: 2px solid #FFC107;
   cursor: pointer;
   font-weight: 800;

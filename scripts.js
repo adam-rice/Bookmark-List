@@ -27,7 +27,7 @@ $list.on('click', '.unread-btn', function () {
   $(this).parent().toggleClass('read');
   $(this).toggleClass('read-btn-update txt-dec-update');
   $(this).siblings().toggleClass('delete-update txt-dec-update');
-  $('.url-span').toggleClass('txt-dec-update');
+  $(this).closest('li').find('.url-span').toggleClass('txt-dec-update');
   counter();
 });
 
