@@ -106,12 +106,12 @@ function submitBkm() {
   }
 }
 
-function reset() {
-  $title.focus();
-  $create.attr('disabled', true);
-}
-
 function validUrl(url) {
   var urlTest = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
   return urlTest.test(url);
+}
+
+function reset() {
+  $title.focus();
+  $create.attr('disabled', true);
 }

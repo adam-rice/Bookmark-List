@@ -8,16 +8,13 @@ main {
   position: relative;
 }
 
-img {
-  border: none;
-}
 
 #logo-section {
+  align-items: center;
   background-color: #455A64;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   position: fixed;
   height: 100%;
   width: 50%;
@@ -28,6 +25,10 @@ h1 {
   font-size: 5rem;
   font-weight: 800;
   margin-bottom: 60px;
+}
+
+img {
+  border: none;
 }
 
 #logo {
@@ -80,24 +81,9 @@ header {
   position: fixed;
   top: 12px;
   right: 4px;
-  /*height: 85px;*/
   width: 190px;
   padding: 8px;
   z-index: 999;
-}
-
-#remove-read-btn {
-  color: #455A64;
-  background-color: #FFC107;
-  border: none;
-  border-radius: 2px;
-  font-size: 0.5rem;
-  float: right;
-}
-
-#remove-read-btn:hover {
-  background-color: #FFD773;
-  cursor: pointer;
 }
 
 .hide {
@@ -126,24 +112,24 @@ h3 {
 }
 
 h2 {
+  color: #455A64;
   font-weight: 800;
   font-size: 2.2rem;
   line-height: 1.4;
-  color: #455A64;
-  width: 85%;
   margin-left: 7%;
   margin-top: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  width: 85%;
 }
 
 hr {
   background-color: #CFD8DC;
   border: none;
+  margin: 20px auto 20px auto;
   height: 2px;
   width: 90%;
-  margin: 20px auto 20px auto;
 }
 
 #hr-lower {
@@ -288,18 +274,18 @@ a.txt-dec-update {
     border-bottom-right-radius: 12px;
     border: none;
     display: inherit;
+    margin: 0 auto;
     position: inherit;
+    text-align: center;
     top: 0;
     right: 0;
     height: 55px;
-    margin: 0 auto;
-    text-align: center;
   }
 
   h3 {
+    display: block;
     font-weight: 400;
     margin: 0 auto;
-    display: block;
     margin-bottom: 3px;
   }
 }
@@ -315,9 +301,9 @@ a.txt-dec-update {
   }
 
   #logo {
+    margin-bottom: -15px;
     height: 50px;
     width: 50px;
-    margin-bottom: -15px;
   }
 
   input, #create-btn {
