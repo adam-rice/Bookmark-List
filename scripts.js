@@ -2,6 +2,7 @@ var $create = $('#create-btn');
 var $title = $('#title');
 var $url = $('#url');
 var $list = $('.list');
+var $trashBtn = $('#remove-read-btn');
 
 $create.on('click', function() {
   submitBkm();
@@ -29,12 +30,21 @@ $list.on('click', '.unread-btn', function () {
   $(this).siblings().toggleClass('delete-update txt-dec-update');
   $(this).closest('li').find('.url-span').toggleClass('txt-dec-update');
   counter();
+  revealRemoveReadBtn();
 });
 
 $list.on('click', '.delete', function() {
   $(this).parent().remove();
   counter();
   revealCounter();
+  revealRemoveReadBtn();
+});
+
+$trashBtn.on('click', function() {
+  $('.read').closest('li').remove();
+  counter();
+  revealCounter();
+  revealRemoveReadBtn();
 });
 
 function enableCreate() {
@@ -89,6 +99,14 @@ function revealCounter() {
     $header.delay(600).slideDown(500);
   } else {
     $header.slideUp(500);
+  }
+}
+
+function revealRemoveReadBtn() {
+  if ($('.read').length >= 1) {
+    $trashBtn.removeClass('hide');
+  } else {
+    $trashBtn.addClass('hide');
   }
 }
 

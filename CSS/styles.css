@@ -81,7 +81,8 @@ header {
   position: fixed;
   top: 12px;
   right: 4px;
-  width: 180px;
+  height: 72px;
+  width: 200px;
   z-index: 999;
 }
 
@@ -91,7 +92,33 @@ header {
 
 h3 {
   font-weight: 800;
-  margin-bottom: 5px;
+  margin: 4px;
+}
+
+#read-bkm-output {
+  display: inline-block;
+}
+
+#remove-read-btn {
+  border: none;
+  background-color: #455864;
+  outline: none;
+  margin: 0 -6px 0 -2px;
+}
+
+#trash-img {
+  height:12px;
+  filter: grayscale(1) brightness(10);
+}
+
+#remove-read-btn img {
+  height:15px;
+  filter: grayscale(1) brightness(10);
+}
+
+#remove-read-btn img:hover {
+  cursor: pointer;
+  filter: grayscale(0) brightness(1);
 }
 
 .new-bkm {
