@@ -130,6 +130,5 @@ function validUrl(url) {
 }
 
 function reset() {
-  $title.focus();
   $create.attr('disabled', true);
 }
